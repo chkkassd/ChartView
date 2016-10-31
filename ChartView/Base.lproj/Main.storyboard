@@ -1,14 +1,43 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="jwc-7R-p9w">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
+        <scene sceneID="KiV-TJ-Hs6">
+            <objects>
+                <viewController id="jwc-7R-p9w" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AKE-wv-miB"/>
+                        <viewControllerLayoutGuide type="bottom" id="R2l-7g-goz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NwB-vh-QYa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TLW-f0-zAJ">
+                                <frame key="frameInset" minX="143" minY="259" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="tLh-3K-tFX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h26-s8-pmD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-534" y="197"/>
+        </scene>
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ChartView" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +45,48 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FsT-RZ-Q4S" customClass="SSFLineChartView" customModule="ChartView" customModuleProvider="target">
+                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="折线图" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OxQ-7a-mbB">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="柱状图" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z9J-4l-4wG">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0B7-hI-150" customClass="SSFBarChartView" customModule="ChartView" customModuleProvider="target">
+                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="0B7-hI-150" secondAttribute="bottom" constant="132" id="Im1-mt-iFA"/>
+                            <constraint firstItem="FsT-RZ-Q4S" firstAttribute="leading" secondItem="0B7-hI-150" secondAttribute="leading" id="TGf-dW-XJ5"/>
+                            <constraint firstAttribute="trailing" secondItem="FsT-RZ-Q4S" secondAttribute="trailing" id="TXM-1a-0ro"/>
+                            <constraint firstItem="0B7-hI-150" firstAttribute="top" secondItem="z9J-4l-4wG" secondAttribute="bottom" constant="8" symbolic="YES" id="ZN7-Dw-kLz"/>
+                            <constraint firstItem="z9J-4l-4wG" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="309" id="fUY-p7-OVe"/>
+                            <constraint firstItem="FsT-RZ-Q4S" firstAttribute="top" secondItem="OxQ-7a-mbB" secondAttribute="bottom" constant="8" symbolic="YES" id="g89-U5-saZ"/>
+                            <constraint firstItem="FsT-RZ-Q4S" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="hhF-2z-sUt"/>
+                            <constraint firstItem="z9J-4l-4wG" firstAttribute="top" secondItem="FsT-RZ-Q4S" secondAttribute="bottom" constant="63" id="j7H-Gs-kBj"/>
+                            <constraint firstItem="OxQ-7a-mbB" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="met-9O-WwQ"/>
+                            <constraint firstItem="OxQ-7a-mbB" firstAttribute="centerX" secondItem="FsT-RZ-Q4S" secondAttribute="centerX" id="uoi-o6-m2V"/>
+                            <constraint firstItem="OxQ-7a-mbB" firstAttribute="leading" secondItem="z9J-4l-4wG" secondAttribute="leading" id="xki-Gt-nqY"/>
+                            <constraint firstItem="FsT-RZ-Q4S" firstAttribute="trailing" secondItem="0B7-hI-150" secondAttribute="trailing" id="yfr-22-Uff"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="barChartView" destination="0B7-hI-150" id="73y-j2-yEo"/>
+                        <outlet property="lineChartView" destination="FsT-RZ-Q4S" id="nIv-dL-XlS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="343" y="174"/>
         </scene>
     </scenes>
 </document>

@@ -7,14 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		91547A6D1DC7303B0044225B /* SSFLineChartModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91547A6C1DC7303B0044225B /* SSFLineChartModel.swift */; };
 		91CB69EE1DC72AB400CE7A39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91CB69ED1DC72AB400CE7A39 /* AppDelegate.swift */; };
 		91CB69F01DC72AB400CE7A39 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91CB69EF1DC72AB400CE7A39 /* ViewController.swift */; };
 		91CB69F31DC72AB400CE7A39 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91CB69F11DC72AB400CE7A39 /* Main.storyboard */; };
 		91CB69F51DC72AB400CE7A39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91CB69F41DC72AB400CE7A39 /* Assets.xcassets */; };
 		91CB69F81DC72AB400CE7A39 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91CB69F61DC72AB400CE7A39 /* LaunchScreen.storyboard */; };
+		91CB6A011DC72B6F00CE7A39 /* SSFBarChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91CB69FF1DC72B6F00CE7A39 /* SSFBarChartView.swift */; };
+		91CB6A021DC72B6F00CE7A39 /* SSFLineChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91CB6A001DC72B6F00CE7A39 /* SSFLineChartView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		91547A6C1DC7303B0044225B /* SSFLineChartModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSFLineChartModel.swift; sourceTree = "<group>"; };
 		91CB69EA1DC72AB400CE7A39 /* ChartView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChartView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91CB69ED1DC72AB400CE7A39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		91CB69EF1DC72AB400CE7A39 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +26,8 @@
 		91CB69F41DC72AB400CE7A39 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		91CB69F71DC72AB400CE7A39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		91CB69F91DC72AB400CE7A39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91CB69FF1DC72B6F00CE7A39 /* SSFBarChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSFBarChartView.swift; sourceTree = "<group>"; };
+		91CB6A001DC72B6F00CE7A39 /* SSFLineChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSFLineChartView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +60,9 @@
 		91CB69EC1DC72AB400CE7A39 /* ChartView */ = {
 			isa = PBXGroup;
 			children = (
+				91547A6C1DC7303B0044225B /* SSFLineChartModel.swift */,
+				91CB69FF1DC72B6F00CE7A39 /* SSFBarChartView.swift */,
+				91CB6A001DC72B6F00CE7A39 /* SSFLineChartView.swift */,
 				91CB69ED1DC72AB400CE7A39 /* AppDelegate.swift */,
 				91CB69EF1DC72AB400CE7A39 /* ViewController.swift */,
 				91CB69F11DC72AB400CE7A39 /* Main.storyboard */,
@@ -137,6 +146,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				91CB69F01DC72AB400CE7A39 /* ViewController.swift in Sources */,
+				91CB6A011DC72B6F00CE7A39 /* SSFBarChartView.swift in Sources */,
+				91CB6A021DC72B6F00CE7A39 /* SSFLineChartView.swift in Sources */,
+				91547A6D1DC7303B0044225B /* SSFLineChartModel.swift in Sources */,
 				91CB69EE1DC72AB400CE7A39 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -297,6 +309,7 @@
 				91CB69FE1DC72AB400CE7A39 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
