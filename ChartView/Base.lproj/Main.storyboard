@@ -6,10 +6,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Second View Controller-->
         <scene sceneID="KiV-TJ-Hs6">
             <objects>
-                <viewController id="jwc-7R-p9w" sceneMemberID="viewController">
+                <viewController id="jwc-7R-p9w" customClass="SecondViewController" customModule="ChartView" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="AKE-wv-miB"/>
                         <viewControllerLayoutGuide type="bottom" id="R2l-7g-goz"/>
@@ -23,12 +23,15 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="tLh-3K-tFX"/>
+                                    <action selector="btnPressed:" destination="jwc-7R-p9w" eventType="touchUpInside" id="GMl-en-woN"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="showViewController" id="gyK-V1-j32"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h26-s8-pmD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
